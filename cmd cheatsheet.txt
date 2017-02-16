@@ -35,6 +35,10 @@ Rails Commands Cheatsheet
 
 * rails g paperclip profile avatar
 
+* rails g model Play title:string description:text director:string
+
+* rails g controller Plays -s (-s means that skip the existing files)
+
 * git branch (To view the list of your branches)
 
 * git checkout -b new_branch
