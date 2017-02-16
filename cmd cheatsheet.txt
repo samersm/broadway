@@ -1,0 +1,64 @@
+Rails Commands Cheatsheet
+
+* rails -h (to show all command lines)
+    
+* gem install rails
+
+* rails new name
+
+* bundle install
+
+* bundle check
+
+* gem list
+
+* gem uninstall <gem name>
+
+* rails routes
+
+* cd rails-projects/saasapp/
+
+* rails s -b $IP -p $PORT
+
+* rails c -h (for show all command lines)
+
+* rails c       -       rails c -s
+        Hirb.enable (related to hirb gem)
+        Contact.all
+        Contact.create(name: "test", description: "test")
+
+* rails g migrate UserProfiles
+
+* rails g controller Users show
+
+* rails g scaffold User title:string decription:string
+
+* rails g paperclip profile avatar
+
+* git branch (To view the list of your branches)
+
+* git checkout -b new_branch
+
+* git status
+
+* git add .
+
+* git commit -m "your commit"
+
+* git push
+
+* git reset --hard HEAD (To revert to a previous commit, ignoring any changes)
+
+* git commit --amend -m "New commit message" (To edit your latest commit)
+
+* git push -f
+
+* heroku domains (To view all your domains)
+
+* heroku rake db:migrate
+
+* git push -f heroku master
+
+* mkdir <foldername>
+
+* touch <filename>.md
