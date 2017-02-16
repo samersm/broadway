@@ -38,6 +38,9 @@ gem 'simple_form', '~> 3.2', '>= 3.2.1'
 # Use Twitter Bootsrap library for front-end UI and layout
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
 
+# Use Hirb for better database table display in console
+gem 'hirb', '~> 0.7.3'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

@@ -1,1 +1,13 @@
-<h1 class="text-center">index page</h1>
+<div class="container">
+
+  <h1>Plays</h1>
+  
+      <% @plays.each do |play| %>
+        <h2><%= link_to play.title, play_path(play) %></h2>
+      <% end %>
+
+  
+  <br>
+  
+  <%= link_to 'Add Play', new_play_path, class: "btn btn-success" %>
+</div>
