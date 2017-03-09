@@ -1,0 +1,62 @@
+index.html.erb
+
+<!--Comments-->
+<p id="notice"><%= notice %></p>
+
+<h1>Plays</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @plays.each do |play| %>
+      <tr>
+        <td><%= link_to 'Show', play %></td>
+        <td><%= link_to 'Edit', edit_play_path(play) %></td>
+        <td><%= link_to 'Destroy', play, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Play', new_play_path %>
+
+
+new.html.erb
+<!--Comments -->
+<%= render 'form', play: @play %>
+
+<%= link_to 'Back', plays_path %>
+
+
+show.html.erb
+<p id="notice"><%= notice %></p>
+
+<%= link_to 'Edit', edit_play_path(@play) %> |
+<%= link_to 'Back', plays_path %>
+
+_form.html.erb
+<!--Comments-->
+<%=form_for(play) do |f| %>
+  <% if play.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(play.errors.count, "error") %> prohibited this play from being saved:</h2>
+
+      <ul>
+      <% play.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

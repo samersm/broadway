@@ -53,6 +53,8 @@ Rails Commands Cheatsheet
 
 * git reset --hard HEAD (To revert to a previous commit, ignoring any changes)
 
+* git clean -f -d (to get rid of untracked files and directories in your working copy)
+
 * git commit --amend -m "New commit message" (To edit your latest commit)
 
 * git push -f
