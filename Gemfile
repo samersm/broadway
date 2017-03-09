@@ -41,6 +41,9 @@ gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
 # Use Hirb for better database table display in console
 gem 'hirb', '~> 0.7.3'
 
+# User and membership gem 
+gem 'devise', '~> 4.2'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
