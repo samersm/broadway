@@ -13,47 +13,32 @@ class PlaysController < ApplicationController
 
   # GET /directories/new
   def new
-    @play = Play.new
+    @play = current_user.play.build
   end
 
   # GET /directories/1/edit
   def edit
   end
   
-  # From scaffold generator
-
   # POST /directories
   # POST /directories.json
   def create
-    @play = Play.new(play_params)
-    
-    # respond_to do |format|
+    @play = current_user.play.build(play_params)
       if @play.save
           redirect_to root_path
-        # format.html { redirect_to @play, notice: 'Play was successfully created.' }
-        # format.json { render :show, status: :created, location: @play }
       else
           render 'new'
-        # format.html { render :new }
-        # format.json { render json: @play.errors, status: :unprocessable_entity }
       end
-    # end
   end  
   
   # PATCH/PUT /plays/1
   # PATCH/PUT /plays/1.json
   def update
-    # respond_to do |format|
       if @play.update(play_params)
         redirect_to play_path(@play)
-        # format.html { redirect_to @play, notice: 'Play was successfully updated.' }
-        # format.json { render :show, status: :ok, location: @play }
       else
         render 'edit'
-        # format.html { render :edit }
-        # format.json { render json: @play.errors, status: :unprocessable_entity }
       end
-    # end
   end
 
   # DELETE /plays/1
@@ -61,10 +46,6 @@ class PlaysController < ApplicationController
   def destroy
     @play.destroy
     redirect_to root_path
-    # respond_to do |format|
-    #   format.html { redirect_to plays_url, notice: 'Play was successfully destroyed.' }
-    #   format.json { head :no_content }
-    # end
   end
 
   
