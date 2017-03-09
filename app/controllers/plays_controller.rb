@@ -13,17 +13,20 @@ class PlaysController < ApplicationController
 
   # GET /directories/new
   def new
-    @play = current_user.play.build
+    @play = current_user.plays.build
+    @categories = Category.all.map { |c| [c.name, c.id] }
   end
 
   # GET /directories/1/edit
   def edit
+    @categories = Category.all.map { |c| [c.name, c.id] }
   end
   
   # POST /directories
   # POST /directories.json
   def create
-    @play = current_user.play.build(play_params)
+    @play = current_user.plays.build(play_params)
+    @play.category_id = params[:category_id]
       if @play.save
           redirect_to root_path
       else
@@ -34,6 +37,8 @@ class PlaysController < ApplicationController
   # PATCH/PUT /plays/1
   # PATCH/PUT /plays/1.json
   def update
+    @play.category_id = params[:category_id]
+    
       if @play.update(play_params)
         redirect_to play_path(@play)
       else
@@ -51,7 +56,7 @@ class PlaysController < ApplicationController
   
     private
     def play_params
-        params.require(:play).permit(:title, :description, :director)
+        params.require(:play).permit(:title, :description, :director, :category_id)
     end
     
     def find_play
