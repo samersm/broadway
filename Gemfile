@@ -44,6 +44,9 @@ gem 'hirb', '~> 0.7.3'
 # User and membership gem 
 gem 'devise', '~> 4.2'
 
+# Paperclip gem for uploading images
+gem 'paperclip', '~> 4.3', '>= 4.3.6'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
