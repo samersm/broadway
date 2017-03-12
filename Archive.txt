@@ -147,3 +147,8 @@ class PlaysController < ApplicationController
       params.fetch(:play, {})
     end
 end
+
+
+$(document).on('turbolinks:load', function() {
+  // Your code here
+});

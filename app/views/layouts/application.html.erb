@@ -6,6 +6,7 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-bar-rating/1.2.2/themes/bootstrap-stars.css">
   </head>
 
   <body>
@@ -45,5 +46,27 @@
     <div class="container">
       <%= yield %>
     </div>
+    
+  <!--Try adding the new jQuery Bar Rating Plugin-->
+	<div class="form-group" id="rating-form" style="display: none;">
+		<label> Rating 
+      <select id="example-bootstrap" name="rating" autocomplete="off">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+    </label>
+	</div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-bar-rating/1.2.2/jquery.barrating.min.js"></script>
+    <script type="text/javascript">
+       $(document).on('turbolinks:load', function() {
+          $('#example-bootstrap').barrating({
+            theme: 'bootstrap-stars',
+          });
+       });
+    </script>
   </body>
 </html>
