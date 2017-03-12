@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'reviews/edit'
+
   get 'reviews/new'
 
   get 'reviews/create'
