@@ -1,13 +1,6 @@
 <%= simple_form_for([@play, @play.reviews.build]) do |f| %>
 	<div id="rating-form" class="form-group">
 		<label> Rating </label>
-		  <!--<select id="rating-form">-->
-    <!--    <option value="1">1</option>-->
-    <!--    <option value="2">2</option>-->
-    <!--    <option value="3">3</option>-->
-    <!--    <option value="4">4</option>-->
-    <!--    <option value="5">5</option>-->
-    <!--  </select>-->
 	</div>
 	<%= f.input :comment %>
 	<%= f.button :submit, :class => "btn-custom2" %>
@@ -19,11 +12,4 @@
 		path: '/assets/',
 		scoreName: 'review[rating]'
 	});
-	    // $(document).on('turbolinks:load', function() {
-      //     $('#rating-form').barrating({
-      //       theme: 'bootstrap-stars'
-      //       // scoreName: 'review[rating]'
-      //       // initialRating: 'review[rating]'
-      //     });
-      // });
 </script>
