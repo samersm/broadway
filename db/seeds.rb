@@ -5,3 +5,15 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+# Category.create(name: 'Classical')
+# Category.create(name: 'Drama')
+# Category.create(name: 'Comedy')
+# Category.create(name: 'Action')
+
+# Delete multiple rows
+# Category.destroy([5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15])
+# Category.delete([4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16])
+
+# Delete a single row
+# Category.destroy(4)
